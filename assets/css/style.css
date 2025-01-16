@@ -1,0 +1,147 @@
+body {
+  background-image: url("../../images/01.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  padding-bottom: 45px;
+}
+
+.main-wrapper {
+  margin: auto;
+  width: 95%;
+}
+
+.logo {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.logo img {
+  width: 100%;
+  width: 100%;
+}
+
+.cssmenu ul li a {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  position: relative;
+  display: block;
+  color: #ffff !important;
+  font-family: "Raleway", serif;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 13px;
+  font-weight: 300;
+  position: relative;
+  list-style: none;
+}
+
+.cssmenu ul li a::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  width: 0%;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.cssmenu ul li a:hover::after {
+  width: 100%;
+}
+
+.cssmenu ul li a i {
+  font-size: 14px;
+  margin-right: 8px;
+  transition: 0.3s;
+}
+
+i.fa-chevron-down {
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  font-size: 16px;
+  transform: translateY(-50%);
+}
+
+.cssmenu ul li a:hover .fa-chevron-down {
+  color: #ffff;
+}
+.link > ul {
+  display: none;
+  transition: 0.4s;
+}
+
+.link > ul li a {
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 7px 12%;
+  z-index: 1;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  color: #fff;
+  transition: 0.4s;
+  text-shadow: none !important;
+  transition: 0.4s;
+  font-family: "Raleway", serif;
+}
+
+/* ! SOSIAL SEBEKE CSS LERI */
+.social {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social li a i {
+  border: 1px solid #ffff;
+  color: #ffff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin: 0 !important;
+  transition: 0.2s;
+}
+
+.language {
+  font-family: "Raleway", serif;
+}
+
+.social li a i:hover {
+  background-color: #f7c775;
+  border-color: #f7c775;
+}
+
+/*! vert-social */
+.vert-social {
+  background: rgba(0, 0, 0, 0.4);
+  padding-top: 1%;
+  display: table;
+  width: 100%;
+}
+
+.vert-social img {
+  width: 100%;
+}
+
+.vert-social3 ul {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.vert-social3 ul li a i {
+  font-size: 12px;
+  padding: 2px;
+}
