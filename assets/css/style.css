@@ -1,10 +1,11 @@
 body {
-  background-image: url("../../images/01.jpg");
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  transition: background-image 1.2s ease-in-out;
   padding-top: 40px;
   padding-bottom: 45px;
 }
@@ -317,6 +318,10 @@ i.fa-chevron-down {
 }
 
 @media screen and (min-width: 0) and (max-width: 900px) {
+  body {
+    background-attachment: scroll; /* Mobil cihazlarda daha düzgün davranış */
+  }
+
   .cssmenu ul li a {
     padding: 10px;
     font-size: 12px;
