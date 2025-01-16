@@ -25,7 +25,7 @@ function changeBackground() {
 bodyElement.style.backgroundImage = images[currentIndex];
 
 // Hər 5 dəqiqədən bir şəkli dəyişdirən interval
-setInterval(changeBackground, 5000);
+setInterval(changeBackground, 10000);
 
 
 const menuLink = document.querySelectorAll(".menu");
