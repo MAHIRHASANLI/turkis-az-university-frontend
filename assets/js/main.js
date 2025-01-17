@@ -41,19 +41,24 @@ function openAccardion() {
      const menuLink = document.querySelectorAll(".menu");
      menuLink.forEach((link) => {
           link.addEventListener("click", function () {
-               const accardions = document.querySelectorAll(".accardion")
+               const accardions = document.querySelectorAll(".accardion");
                accardions.forEach((accardion) => {
                     if (link.nextElementSibling === accardion) {
-                         accardion.style.height = (accardion.children.length * 35) + "px";
-                    }
-                    else {
+                         if (accardion.style.height === "0px" || accardion.style.height === "") {
+                              accardion.style.height = (accardion.children.length * 35) + "px";
+                         } else {
+                              accardion.style.height = "0px";
+                         }
+                    } else {
                          accardion.style.height = "0px";
                     }
-               })
+               });
           });
-
-     })
+     });
 }
+
+//  openAccardi     on();
+
 
 //! BUTTON SCROLL ILE GERI DONME
 function setupScrollButton() {
