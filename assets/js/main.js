@@ -29,16 +29,17 @@ setInterval(changeBackground, 10000);
 
 
 const menuLink = document.querySelectorAll(".menu");
-
-menuLink.forEach((item) => {
-     let isOpen = false;
-     item.addEventListener("click", function () {
-          isOpen = !isOpen;
-          if (isOpen) {
-               item.nextElementSibling.style.display = "block"
-          } else {
-               item.nextElementSibling.style.display = "none"
-          }
+menuLink.forEach((link) => {
+     link.addEventListener("click", function () {
+          const accardions = document.querySelectorAll(".accardion")
+          accardions.forEach((accardion) => {
+               if (link.nextElementSibling === accardion) {
+                    accardion.style.height = (accardion.children.length * 35) + "px";
+               }
+               else {
+                    accardion.style.height = "0px";
+               }
+          })
      });
 
 })

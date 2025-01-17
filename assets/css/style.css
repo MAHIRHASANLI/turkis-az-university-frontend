@@ -14,7 +14,6 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -26,8 +25,11 @@ body {
   width: 100%;
 }
 
-.cssmenu ul li a {
+.cssmenu .link {
   background: rgba(0, 0, 0, 0.8);
+}
+
+.cssmenu ul li a {
   padding: 15px;
   position: relative;
   display: block;
@@ -75,17 +77,20 @@ i.fa-chevron-down {
 .cssmenu ul li a:hover .fa-chevron-down {
   color: #ffff;
 }
-.link > ul {
-  display: none;
+.accardion {
+  height: 0px;
+  overflow: hidden;
   transition: 0.4s;
 }
 
-.link > ul li a {
+.accardion li a {
   background-color: rgba(0, 0, 0, 0.4);
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
-  padding: 7px 12%;
+  height: 35px;
+  display: flex;
+  align-items: center;
   z-index: 1;
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -151,11 +156,15 @@ i.fa-chevron-down {
 }
 
 /*! <!-- MENU CENTER --> */
+/* .ts-main-center {
+  border: 1px solid red;
+  align-items: center;
+  display: flex;
+} */
 
 .animated {
   background: rgba(0, 0, 0, 0.4);
   color: white;
-  /* text-align: center; */
   font-family: "Raleway", serif;
   padding: 10px 15px;
 }
@@ -221,8 +230,9 @@ i.fa-chevron-down {
 @media screen and (min-width: 1400px) {
 }
 
-@media screen and (min-width: 900px) and (max-width: 1400px) {
+@media screen and (min-width: 990px) and (max-width: 1400px) {
   .cssmenu ul li a {
+    display: flex;
     padding: 15px;
     font-size: 13px;
     font-weight: 300;
@@ -241,7 +251,6 @@ i.fa-chevron-down {
   .link > ul li a {
     font-size: 14px;
     font-weight: 400;
-    padding: 7px 12%;
     font-size: 14px;
   }
 
@@ -273,15 +282,18 @@ i.fa-chevron-down {
   }
 
   .animated-first {
-    margin-top: 150px;
+    margin-top: 0px;
+    margin-top: 360px;
   }
 
   .animated-nth {
-    margin-top: 170px;
+    margin-top: 20px;
+    margin-top: 380px;
   }
 
   .animated-last {
-    margin-top: 200px;
+    margin-top: 30px;
+    margin-top: 400px;
   }
 
   .title {
@@ -317,9 +329,9 @@ i.fa-chevron-down {
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 900px) {
+@media screen and (min-width: 0) and (max-width: 990px) {
   body {
-    background-attachment: scroll; /* Mobil cihazlarda daha düzgün davranış */
+    /* background-attachment: scroll;  */
   }
 
   .logo {
@@ -331,12 +343,12 @@ i.fa-chevron-down {
   }
   .cssmenu ul li a {
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
   }
 
   .cssmenu ul li a i {
-    font-size: 13px;
+    font-size: 14px;
     margin-right: 8px;
   }
 
@@ -372,7 +384,7 @@ i.fa-chevron-down {
 
   /*! <!-- MENU CENTER --> */
   .ts-main-center {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 
   .animated {
