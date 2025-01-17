@@ -45,7 +45,7 @@ function openAccardion() {
                accardions.forEach((accardion) => {
                     if (link.nextElementSibling === accardion) {
                          if (accardion.style.height === "0px" || accardion.style.height === "") {
-                              accardion.style.height = (accardion.children.length * 35) + "px";
+                              accardion.style.height = (accardion.children.length * 40) + "px";
                          } else {
                               accardion.style.height = "0px";
                          }
