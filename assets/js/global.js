@@ -3,6 +3,7 @@ function allFunctions() {
      addPageSlider();
      openAccardion()
      setupScrollButton()
+     accardionColorChange()
 }
 
 
@@ -57,7 +58,55 @@ function openAccardion() {
      });
 }
 
-//  openAccardi     on();
+function accardionColorChange() {
+     const checkboxes = document.querySelectorAll('[class*="accardion-wrapper"] input[type=checkbox]');
+
+     checkboxes.forEach(checkbox => {
+         checkbox.addEventListener('change', () => {
+             checkboxes.forEach(cb => {
+                 const label = cb.nextElementSibling;
+                 const span = label.querySelector('span:nth-of-type(2)');
+     
+                 if (cb.checked) {
+                     if (cb === checkbox) {
+                         label.style.background = '#44c6eb';
+                         label.style.borderTop = '1px solid #878e98';
+                         label.style.borderBottom = '1px solid #2799db';
+                         label.style.backgroundImage = 'linear-gradient(to bottom, #44c6eb, #2799db)';
+     
+                         span.style.background = '#2173a1';
+                         span.style.borderTop = '1px solid #1b5f85';
+                         span.style.borderBottom = '1px solid #4cb1e4';
+                         span.style.boxShadow = 'inset 0 0 5px #111';
+                     } else {
+                         cb.checked = false;
+                         label.style.background = '';
+                         label.style.borderTop = '';
+                         label.style.borderBottom = '';
+                         label.style.backgroundImage = '';
+     
+                         span.style.background = '';
+                         span.style.borderTop = '';
+                         span.style.borderBottom = '';
+                         span.style.boxShadow = '';
+                     }
+                 } else {
+                     label.style.background = '';
+                     label.style.borderTop = '';
+                     label.style.borderBottom = '';
+                     label.style.backgroundImage = '';
+     
+                     span.style.background = '';
+                     span.style.borderTop = '';
+                     span.style.borderBottom = '';
+                     span.style.boxShadow = '';
+                 }
+             });
+         });
+     });
+     
+
+}
 
 
 //! BUTTON SCROLL ILE GERI DONME
