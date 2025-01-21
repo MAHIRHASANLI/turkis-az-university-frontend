@@ -71,6 +71,20 @@
 /* ! RESPONSIVLIK */
 
 @media screen and (min-width: 1400px) {
+  .animated-first {
+    margin-top: 0px;
+    margin-top: 380px;
+  }
+
+  .animated-nth {
+    margin-top: 20px;
+    margin-top: 400px;
+  }
+
+  .animated-last {
+    margin-top: 30px;
+    margin-top: 420px;
+  }
 }
 
 @media screen and (min-width: 990px) and (max-width: 1400px) {

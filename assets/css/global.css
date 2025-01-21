@@ -22,6 +22,12 @@ body {
 }
 
 body {
+  /*  */
+}
+
+#main {
+  padding-top: 40px;
+  padding-bottom: 50px;
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
   background-size: cover;
@@ -29,8 +35,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   transition: 1s ease-in-out;
-  padding-top: 40px;
-  padding-bottom: 45px;
 }
 
 .main-wrapper {
@@ -184,8 +188,8 @@ i.fa-chevron-down {
   position: fixed;
   opacity: 1;
   cursor: pointer;
-  right: 40px;
-  bottom: 30px;
+  right: 25px;
+  bottom: 100px;
   z-index: 999999;
 }
 

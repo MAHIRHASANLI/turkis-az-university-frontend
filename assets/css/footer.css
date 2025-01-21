@@ -1,0 +1,51 @@
+footer {
+  /* margin-top: 100px; */
+  background-color: #b7b8b8;
+  /* #bbb5b5;  */
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container {
+  width: 90%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  font-size: 14px;
+}
+
+.footer-right ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  background: transparent;
+}
+
+.footer-right ul li {
+  margin-left: 15px;
+}
+
+.footer-right ul li a {
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-right ul li a i {
+  border: 1px solid #3333;
+  color: #333;
+  transition: color 0.3s;
+  padding: 5px 10px;
+}
+
+.footer-right ul li a:hover {
+  color: #006738; /* Hover effekti */
+}
