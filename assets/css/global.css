@@ -22,26 +22,38 @@ body {
 }
 
 body {
+  background-color: #000;
   /*  */
+}
+body {
+  background-color: #000; /* Şəkilə uyğun fon rəngi */
+  will-change: background-image;
+  backface-visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #main {
+  background-image: url("../../images/01.jpg");
+  position: relative;
   padding-top: 40px;
   padding-bottom: 50px;
   min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
+  /* min-height: calc(var(--vh, 1vh) * 100); */
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  transition: 1s ease-in-out;
+  transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .main-wrapper {
-  width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.ts-main-left {
+  width: 90%;
 }
 
 .logo {
@@ -240,8 +252,8 @@ i.fa-chevron-down {
 }
 
 @media screen and (min-width: 0) and (max-width: 990px) {
-  body {
-    /* background-attachment: scroll;  */
+  .ts-main-left {
+    width: 100%;
   }
 
   .logo {
@@ -293,8 +305,8 @@ i.fa-chevron-down {
   }
 
   .top-back-btn {
-    right: 20px;
-    bottom: 20px;
+    right: 10px;
+    bottom: 110px;
   }
 }
 

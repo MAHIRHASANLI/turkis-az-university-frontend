@@ -28,6 +28,12 @@ footer {
   background: transparent;
 }
 
+.footer-container a,
+.footer-container p {
+  font-size: 14px;
+  font-family: "Raleway", serif;
+}
+
 .footer-right ul li {
   margin-left: 15px;
 }
@@ -46,6 +52,15 @@ footer {
   padding: 5px 10px;
 }
 
-.footer-right ul li a:hover {
-  color: #006738; /* Hover effekti */
+@media screen and (max-width: 800px) {
+  footer {
+    padding: 20px 0;
+  }
+
+  .footer-container {
+    width: 90%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
 }

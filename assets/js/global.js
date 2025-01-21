@@ -20,20 +20,14 @@ function addPageSlider() {
      let currentIndex = 0;
 
      const mainElement = document.getElementById("main");
+     mainElement.style.backgroundImage = images[currentIndex];
 
-     // Arxa fon şəklini dəyişdirən funksiyanı yazırıq
      function changeBackground() {
-          // Növbəti şəkli təyin edirik
           currentIndex = (currentIndex + 1) % images.length;
 
-          // Yeni fon şəklini body-yə təyin edirik
           mainElement.style.backgroundImage = images[currentIndex];
      }
 
-     // İlk fon şəklini təyin edək
-     mainElement.style.backgroundImage = images[currentIndex];
-
-     // Hər 5 dəqiqədən bir şəkli dəyişdirən interval
      setInterval(changeBackground, 5000);
 }
 
@@ -113,7 +107,7 @@ function accardionColorChange() {
 function setupScrollButton() {
      const backBtn = document.querySelector(".top-back-btn");
      window.addEventListener("scroll", function () {
-          if (this.scrollY > 50) {
+          if (this.scrollY > 200) {
                backBtn.style.display = "block";
 
           } else {
