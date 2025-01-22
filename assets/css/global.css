@@ -33,7 +33,7 @@ body {
 }
 
 #main {
-  background-image: url("../../images/01.jpg");
+  background-image: url(../../images/01.jpg);
   position: relative;
   padding-top: 40px;
   padding-bottom: 50px;

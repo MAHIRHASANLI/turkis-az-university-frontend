@@ -52,11 +52,12 @@ function openAccardion() {
      });
 }
 
+//! XEBER ACCARDINU
 function accardionColorChange() {
      const checkboxes = document.querySelectorAll('[class*="accardion-wrapper"] input[type=checkbox]');
 
      checkboxes.forEach(checkbox => {
-          checkbox.addEventListener('change', () => {
+          checkbox.addEventListener('focus', (e) => {
                checkboxes.forEach(cb => {
                     const label = cb.nextElementSibling;
                     const span = label.querySelector('span:nth-of-type(2)');
