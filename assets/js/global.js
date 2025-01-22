@@ -1,11 +1,9 @@
-allFunctions()
-function allFunctions() {
+document.addEventListener("DOMContentLoaded", function () {
      addPageSlider();
-     openAccardion()
-     setupScrollButton()
-     accardionColorChange()
-}
-
+     openAccardion();
+     setupScrollButton();
+     accardionColorChange();
+})
 
 //! ANA SEHIFE DLIDER I
 function addPageSlider() {
