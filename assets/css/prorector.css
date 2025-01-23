@@ -1,88 +1,65 @@
-.prorector {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    color: white ;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 60px;
-    padding: 50px 0px 0px 0px ;
-    font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+hr {
+  padding: 5px;
+  background-color: rgb(240, 175, 10);
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
 
+.name h3 {
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.description p {
+  margin-top: 20px;
+  line-height: 21px;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.image {
+  margin-left: 10px;
+  margin-bottom: 15px;
+  width: 320px;
+  height: 200px;
+  float: right;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border: solid 2px #fff;
+  border-radius: 15px;
+  object-fit: cover;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  hr {
+    padding: 2px;
+    margin-top: 30px;
+    margin-bottom: 35px;
   }
-.prorector img{
-    width: 100%;
 
-}
-.prorector h1{
-    font-size: 26px;
-    color: white;
-}
-.prorectordiv{
+  .name h3 {
+    font-size: 24px;
+  }
+
+  .description p {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .image {
+    margin-left: 0;
+    margin-bottom: 20px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    
-    gap: 50px;
-    padding: 0px 30px;
-}
-.prorector-aboutdiv{
-display: flex;
-justify-content: center;
-align-items: start  ;
-flex-direction: column;
-gap: 30px;
-width: 50%;
-}
-.prorector-imagediv{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-   }
-.prorector img{
+    height: 200px;
+    float: right;
+  }
+
+  .image img {
     border-radius: 10px;
-    border: 1px solid white;
-}
-.prorector-aboutdiv h2{
-    font-size: 28px;
-}
-.prorector-aboutdiv p{
-    font-size: 17px;
-    text-align: justify;
-}
-.prorector-end{
-    padding: 5px;
-    background: #b8a36d;
-    width: 95%;
-    margin: 20px 0px;
-}
-
-
-
-
-
-
-
-
-/* .prorector-socialmedia{
-    background: rgba(255, 255, 255, 0.7);
-    width: 100%;
-    margin: 0px 30px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px;
   }
-  .prorector-icons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-  .prorector i{
-    border-radius: 50%;
-    padding: 5px;
-    background: #000;
-  } */
+}
