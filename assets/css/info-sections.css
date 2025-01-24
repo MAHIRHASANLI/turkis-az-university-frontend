@@ -1,3 +1,10 @@
+hr {
+  padding: 1px;
+  background-color: rgb(240, 175, 10);
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
 .sec-detail {
   font-size: 16px;
   color: #fff;
@@ -69,14 +76,20 @@
 }
 
 @media screen and (max-width: 900px) {
+  hr {
+    padding: 1px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
   .accardion-wrapper li label {
     margin-bottom: 5px;
-    padding: 8px;
-    font-size: 12px;
+    padding: 10px;
+    font-size: 13px;
   }
 
   .accardion-wrapper li ul li a {
-    padding: 5px 10px;
-    font-size: 11px;
+    padding: 7px 10px;
+    font-size: 12px;
   }
 }

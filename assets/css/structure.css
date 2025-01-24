@@ -1,5 +1,5 @@
 hr {
-  padding: 2px;
+  padding: 1px;
   background-color: rgb(240, 175, 10);
   margin-top: 50px;
   margin-top: 120px;
@@ -50,7 +50,7 @@ strong {
   hr {
     padding: 1px;
     margin-top: 30px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
 
   .name h3 {
