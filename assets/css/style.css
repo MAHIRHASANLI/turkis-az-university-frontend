@@ -208,7 +208,7 @@
   .title {
     gap: 10px;
     padding: 8px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .announcements {
@@ -216,7 +216,7 @@
   }
 
   .announcement {
-    padding: 5px 0;
+    padding: 8px 0;
     gap: 8px;
     justify-content: flex-start;
   }
@@ -226,10 +226,11 @@
   }
 
   .announcement a {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .btn-link-patron {
+    margin-top: 8px;
     gap: 10px;
     font-size: 12px;
   }
