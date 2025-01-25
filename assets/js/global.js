@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-     addPageSlider();
+     // addPageSlider();
      openAccardion();
      setupScrollButton();
      accardionColorChange();
@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
 function addPageSlider() {
      // Şəkillərin olduğu massiv
      const images = [
-          'url("../../images/01.jpg")',
-          'url("../../images/03.jpeg")',
-          'url("../../images/02.jpeg")'
+          'url(../images/01.jpg)',
+          'url(../images/03.jpeg)',
+          'url(../images/02.jpeg)'
      ];
 
      // Başlanğıc olaraq birinci şəkli göstərək
