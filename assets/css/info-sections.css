@@ -35,6 +35,10 @@ hr {
   padding: 12px;
   font-size: 15px;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
 .accardion-wrapper li label:hover {
@@ -60,7 +64,7 @@ hr {
   margin-bottom: 5px;
 }
 
-.accardion-wrapper li ul li a {
+.accardion-wrapper li .accardion li a {
   display: flex;
   align-items: center;
   padding: 6px 12px;
@@ -71,7 +75,7 @@ hr {
   transition: 150ms;
 }
 
-.accardion-wrapper li ul li a:hover {
+.accardion-wrapper li .accardion li a:hover {
   color: #44c6eb;
 }
 
