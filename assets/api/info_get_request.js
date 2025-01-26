@@ -26,7 +26,7 @@ function addInfoUI(array, date) {
      const infoItemLi = createElement("li")
      const label = createElement("label", { className: "menu" });
      //TODO Tarix və xəbər sayı
-     const spanDate = createElement("span", {}, `${date} - Xəbərləri`);
+     const spanDate = createElement("span", {}, `${date} - Ci il üzrə`);
      const spanCountInfo = createElement("span", {}, `{ ${filterData.length} }`);
      label.append(spanDate, spanCountInfo);
      //TODO Accordion siyahısı
@@ -82,6 +82,7 @@ function findDetailInfo({ title, description, date, images }) {
      divContainer.append(h3Title, pDescription, imgContainer, aDate);
      //Melumati goster
      detailContainer.innerHTML = "";
+     detailContainer.style.display = "block";
      detailContainer.appendChild(divContainer);
 
      // Yuxarıya keçid
