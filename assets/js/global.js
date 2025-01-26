@@ -1,3 +1,5 @@
+import { scrollToTop } from "../utils/index.js";
+
 document.addEventListener("DOMContentLoaded", function () {
      // addPageSlider();
      openAccardion();
@@ -52,77 +54,58 @@ function openAccardion() {
           }
 
      })
-     // const menuLink = document.querySelectorAll(".menu");
-     // menuLink.forEach((link) => {
-     //      link.addEventListener("click", function (e) {
-     //           console.log(e.target);
-
-     //           const accardions = document.querySelectorAll(".accardion");
-     //           accardions.forEach((accardion) => {
-     //                if (link.nextElementSibling === accardion) {
-     //                     if (accardion.style.height === "0px" || accardion.style.height === "") {
-     //                          accardion.style.height = (accardion.children.length * 40) + "px";
-     //                     } else {
-     //                          accardion.style.height = "0px";
-     //                     }
-     //                } else {
-     //                     accardion.style.height = "0px";
-     //                }
-     //           });
-     //      });
-     // });
 }
 
 //! XEBER ACCARDINU
-// function accardionColorChange() {
-//      const checkboxes = document.querySelectorAll('input[type=checkbox]');
+function accardionColorChange() {
+     const checkboxes = document.querySelectorAll('.accardion');
 
-//      checkboxes.forEach(checkbox => {
-//           checkbox.addEventListener('focus', (e) => {
-//                checkboxes.forEach(cb => {
-//                     const label = cb.nextElementSibling;
-//                     const span = label.querySelector('span:nth-of-type(2)');
+     checkboxes.forEach(checkbox => {
+          checkbox.addEventListener('click', (e) => {
+               checkboxes.forEach(cb => {
+                    const label = cb.nextElementSibling;
+                    const span = label.querySelector('span:nth-of-type(2)');
 
-//                     if (cb.checked) {
-//                          if (cb === checkbox) {
-//                               label.style.background = '#44c6eb';
-//                               label.style.borderTop = '1px solid #878e98';
-//                               label.style.borderBottom = '1px solid #2799db';
-//                               label.style.backgroundImage = 'linear-gradient(to bottom, #44c6eb, #2799db)';
+                    if (cb.checked) {
+                         if (cb === checkbox) {
+                              label.style.background = '#44c6eb';
+                              label.style.borderTop = '1px solid #878e98';
+                              label.style.borderBottom = '1px solid #2799db';
+                              label.style.backgroundImage = 'linear-gradient(to bottom, #44c6eb, #2799db)';
 
-//                               span.style.background = '#2173a1';
-//                               span.style.borderTop = '1px solid #1b5f85';
-//                               span.style.borderBottom = '1px solid #4cb1e4';
-//                               span.style.boxShadow = 'inset 0 0 5px #111';
-//                          } else {
-//                               cb.checked = false;
-//                               label.style.background = '';
-//                               label.style.borderTop = '';
-//                               label.style.borderBottom = '';
-//                               label.style.backgroundImage = '';
+                              span.style.background = '#2173a1';
+                              span.style.borderTop = '1px solid #1b5f85';
+                              span.style.borderBottom = '1px solid #4cb1e4';
+                              span.style.boxShadow = 'inset 0 0 5px #111';
+                         } else {
+                              cb.checked = false;
+                              label.style.background = '';
+                              label.style.borderTop = '';
+                              label.style.borderBottom = '';
+                              label.style.backgroundImage = '';
 
-//                               span.style.background = '';
-//                               span.style.borderTop = '';
-//                               span.style.borderBottom = '';
-//                               span.style.boxShadow = '';
-//                          }
-//                     } else {
-//                          label.style.background = '';
-//                          label.style.borderTop = '';
-//                          label.style.borderBottom = '';
-//                          label.style.backgroundImage = '';
+                              span.style.background = '';
+                              span.style.borderTop = '';
+                              span.style.borderBottom = '';
+                              span.style.boxShadow = '';
+                         }
+                    } else {
+                         label.style.background = '';
+                         label.style.borderTop = '';
+                         label.style.borderBottom = '';
+                         label.style.backgroundImage = '';
 
-//                          span.style.background = '';
-//                          span.style.borderTop = '';
-//                          span.style.borderBottom = '';
-//                          span.style.boxShadow = '';
-//                     }
-//                });
-//           });
-//      });
+                         span.style.background = '';
+                         span.style.borderTop = '';
+                         span.style.borderBottom = '';
+                         span.style.boxShadow = '';
+                    }
+               });
+          });
+     });
 
 
-// }
+}
 
 
 //! BUTTON SCROLL ILE GERI DONME
@@ -137,8 +120,6 @@ function setupScrollButton() {
           }
      });
 
-     backBtn.addEventListener("click", function () {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-     })
+     backBtn.addEventListener("click", scrollToTop)
 
 }

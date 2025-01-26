@@ -25,7 +25,9 @@
   font-weight: 600;
 }
 
-.announcements {
+.announcements,
+.activities,
+.news {
   padding: 7px 0;
 }
 
@@ -45,6 +47,7 @@
   color: #ffff;
   font-size: 12px;
   transition: 0.3s;
+  line-height: normal;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -115,7 +118,9 @@
     font-size: 12px;
   }
 
-  .announcements {
+  .announcements,
+  .activities,
+  .news {
     padding: 7px 0;
   }
 
@@ -211,7 +216,9 @@
     font-size: 14px;
   }
 
-  .announcements {
+  .announcements,
+  .activities,
+  .news {
     padding: 5px 0;
   }
 

@@ -64,20 +64,74 @@ hr {
   margin-bottom: 5px;
 }
 
-.accardion-wrapper li .accardion li a {
-  display: flex;
-  align-items: center;
-  padding: 6px 12px;
+.accardion-wrapper li .accardion li a.info {
+  padding: 5px 12px;
   color: #999;
   text-decoration: none;
   background-color: transparent;
   font-size: 14px;
   transition: 150ms;
+  line-height: 17px;
+  overflow: hidden;
+  /*display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; */
 }
 
-.accardion-wrapper li .accardion li a:hover {
+.accardion-wrapper li .accardion li a.info:hover {
   color: #44c6eb;
 }
+
+/* ! DETAIL INFORMATION */
+.detail-information {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  color: red;
+}
+
+.detail-information h3.detail-title {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+}
+
+.detail-information .detail-description {
+  margin-top: 30px;
+  line-height: 21px;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: justify;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+.detail-information .detail-date {
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.2s linear;
+}
+
+.detail-information .detail-date:hover {
+  color: #44c6eb;
+}
+
+.detail-information .img-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.detail-information .img-container img {
+  width: 280px;
+  height: 180px;
+  border: solid 1px #fff;
+  border-radius: 15px;
+  object-fit: cover;
+  color: white;
+}
+
+/* ! */
 
 @media screen and (max-width: 900px) {
   hr {
@@ -95,5 +149,26 @@ hr {
   .accardion-wrapper li ul li a {
     padding: 7px 10px;
     font-size: 12px;
+  }
+
+  .detail-information h3.detail-title {
+    font-size: 20px;
+  }
+
+  .detail-information .detail-description {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .detail-information .img-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .detail-information .img-container img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    /* float: right; */
   }
 }
