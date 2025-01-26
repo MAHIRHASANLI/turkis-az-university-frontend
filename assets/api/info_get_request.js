@@ -4,15 +4,15 @@ import { getBaseRequest } from "./base_request.js";
 let newsDatas = [];
 
 
-export async function loadAndRenderInfo(category = " ") {
+export async function loadAndRenderInfo(category) {
      try {
-          if (category) {
-               const unicDates = new Set();
-               const { data } = await getBaseRequest();
-               newsDatas = data;
-               data.forEach(({ date }) => unicDates.add(date.slice(3)));
-               unicDates.forEach((date) => addInfoUI(data, date));
-          }
+          // if (category) {
+          const unicDates = new Set();
+          const { data } = await getBaseRequest(category);
+          newsDatas = data;
+          data.forEach(({ date }) => unicDates.add(date.slice(3)));
+          unicDates.forEach((date) => addInfoUI(data, date));
+          // }
      } catch (error) {
           console.error("Xəbərlər yüklənərkən xəta baş verdi: ", error.message)
      }
@@ -40,7 +40,7 @@ function addInfoUI(array, date) {
 
 //TODO Accordion üçün hər bir elementi yaradiriq;
 function createAccardionItem(data) {
-     const accardionItemA = createElement("a", { className: "info", id: data.id }, `${data.date} - ${data.title}`);
+     const accardionItemA = createElement("a", { className: "info", id: data._id }, `${data.date} - ${data.title}`);
      const accardionItemLi = createElement("li");
      accardionItemLi.append(accardionItemA);
      return accardionItemLi;
@@ -51,7 +51,7 @@ const info = document.querySelector(".accardion-wrapper");
 info.addEventListener("click", showDetailInfo);
 function showDetailInfo(e) {
      if (e.target.classList.contains("info")) {
-          const detailInfo = newsDatas.find(({ id }) => id == e.target.id);
+          const detailInfo = newsDatas.find(({ _id }) => _id == e.target.id);
           if (detailInfo) {
                findDetailInfo(detailInfo);
           } else {
@@ -90,6 +90,7 @@ function findDetailInfo({ title, description, date, images }) {
 
 //NOT FOUUND mesaji
 function renderNotFoundMessage(container) {
+     container.innerHTML = "";
      container.appendChild(createElement("h3", { className: "not-found-message" }, "Axtardığınız xəbər tapılmadı 😊"));
 }
 
