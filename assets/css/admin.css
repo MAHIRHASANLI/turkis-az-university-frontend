@@ -1,0 +1,429 @@
+section.section {
+  margin-top: 100px;
+}
+
+.table-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  min-width: 85%;
+  max-width: 95%;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  /* border-radius: 20px; */
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.table th,
+td {
+  border: 1px solid black;
+  padding: 1px;
+  text-align: center;
+}
+
+.thead {
+  color: White;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.tbody {
+  margin-top: 30px !important;
+}
+
+.search-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 85%;
+}
+
+.serch-input {
+  width: 60%;
+}
+
+.serch-input input {
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 0 12px;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.serch-input input:focus,
+.input-group textarea:focus,
+.select:focus {
+  border-color: rgb(76, 127, 175);
+  outline: none;
+}
+
+.select-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-add {
+  border: none;
+  outline: none;
+  /* padding: 15px 25px; */
+  height: 45px;
+  min-width: 150px;
+  color: white !important;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(76, 127, 175);
+}
+
+.select {
+  height: 45px;
+  min-width: 150px;
+  padding-left: 5px;
+  border: 1px solid rgb(76, 127, 175);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Min 800px və max 1200px üçün */
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+  .table-wrapper {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .table {
+    min-width: 85%; /* Daha geniş olsun */
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .search-add {
+    flex-direction: column;
+    width: 80%; /* Daha çox yer tutsun */
+    margin-bottom: 15px;
+    gap: 10px;
+  }
+
+  .serch-input {
+    width: 100%; /* Search input daha geniş olsun */
+  }
+
+  .serch-input input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .btn-add {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .thead tr th {
+    font-size: 12px;
+  }
+}
+
+/* Max 800px üçün */
+@media screen and (max-width: 800px) {
+  .table-wrapper {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .table {
+    min-width: 95%; /* Kiçik ekranlar üçün minimum genişlik artırılır */
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .search-add {
+    width: 90%; /* Kiçik ekranlarda daha geniş */
+    flex-direction: column; /* Flex yönü sütun olsun */
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  .serch-input {
+    width: 100%; /* Kiçik ekranlar üçün tam genişlik */
+    margin-bottom: 10px; /* Input və düymə arasında boşluq olsun */
+  }
+
+  .serch-input input {
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .btn-add {
+    padding: 8px 20px;
+    font-size: 10px;
+    width: 100%;
+  }
+
+  .thead tr th {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .thead tr th {
+    font-size: 8px;
+  }
+}
+
+.product th {
+  padding: 10px;
+}
+
+button.btn-put,
+button.btn-remove {
+  border: none;
+  outline: none;
+  padding: 10px 25px;
+  color: white !important;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f44336;
+}
+
+.product-img {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  /* border-radius: 50%; */
+  /* margin-right: 10px; */
+}
+
+/* Min 800px və max 1200px üçün */
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+  .product th {
+    padding: 12px;
+  }
+
+  .product th,
+  .product td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  button.btn-put,
+  button.btn-remove {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  button.btn-put {
+    background-color: rgb(76, 127, 175);
+  }
+
+  button.btn-remove {
+    margin-left: 12px;
+    background-color: #f44336;
+  }
+
+  .product-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+}
+
+/* Max 800px üçün */
+@media screen and (max-width: 800px) {
+  .product th {
+    padding: 8px;
+  }
+
+  .product th,
+  .product td {
+    font-size: 10px;
+
+    padding: 5px;
+  }
+
+  button.btn-put,
+  button.btn-remove {
+    padding: 3px 5px;
+    font-size: 8px;
+  }
+
+  button.btn-put {
+    background-color: rgb(76, 127, 175);
+  }
+
+  button.btn-remove {
+    margin-left: 8px;
+    background-color: #f44336;
+  }
+
+  .product-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .product-img {
+    width: 25px;
+    height: 20px;
+    margin-right: 3px;
+  }
+}
+/* 
+  #form-container {
+    display: none;
+  } */
+#form-container {
+  display: none;
+  width: 50%;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 30px 30px;
+  border-radius: 15px;
+  z-index: 99;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.select-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-file {
+  /* width: 80px; */
+  overflow: hidden;
+}
+.form-select {
+  width: 100%;
+  height: 53px;
+}
+
+.input-group {
+  margin-top: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.input-group input,
+.select-file input,
+.select-file select,
+.input-group textarea {
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.input-file input {
+  padding: 13px;
+}
+
+.input-group input:focus {
+  border-color: rgb(76, 127, 175);
+  outline: none;
+}
+
+label {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.btn-submit {
+  display: block;
+  outline: none;
+  border: none;
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  background-color: rgb(76, 127, 175);
+  font-size: 13px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.2s all linear;
+  box-shadow: rgb(38, 57, 77) 0px 10px 10px -10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-wrapper span {
+  font-size: 12px;
+  color: red;
+  display: block;
+  text-align: left !important;
+}
+
+@media (max-width: 800px) {
+  #form-container {
+    width: 90%; /* Formu kiçik ekranlarda daha uyğun ölçüdə göstərir */
+    padding: 0 10px 10px; /* Paddingi azaldırıq ki, form daha səliqəli görünsün */
+  }
+
+  .input-group input,
+  .select-file input,
+  .select-file select {
+    font-size: 12px; /* Font ölçüsünü azaldırıq */
+    padding: 10px; /* Inputların hündürlüyünü azaltmaq üçün padding azaldılır */
+  }
+  .form-select {
+    width: 100%;
+    height: 40px;
+  }
+
+  .input-file input {
+    padding: 10px; /* File input üçün də padding azaldılır */
+  }
+
+  .btn-submit {
+    padding: 10px 15px; /* Buttonun paddingini azaldırıq */
+    font-size: 12px; /* Buttonun yazı ölçüsünü azaldırıq */
+  }
+
+  .input-group {
+    margin-top: 10px; /* Input aralarındakı məsafəni azaldırıq */
+  }
+
+  .close {
+    padding: 5px 10px; /* Bağlama düyməsinin ölçüsünü azaldırıq */
+    font-size: 14px; /* Bağlama düyməsinin yazı ölçüsünü kiçildir */
+  }
+
+  #form-container span {
+    font-size: 10px; /* Xətaları göstərən span-ın yazı ölçüsünü azaldırıq */
+  }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Admin Page</title>
+     <link rel="stylesheet" href="./assets/css/admin.css">
+</head>
+
+<body>
+     <section class="section">
+          <div class="table-wrapper">
+               <div class="search-add">
+                    <div class="serch-input">
+                         <input type="text" id="search-input" placeholder="Axtarın..." />
+                    </div>
+                    <div class="select-btn">
+                         <select id="category-select" class="select">
+                              <option value="news">Xəbər</option>
+                              <option value="announcements">Elan</option>
+                              <option value="activities">Fəaliyyət</option>
+                         </select>
+                         <!-- Informasiya əlavə et düyməsi -->
+                         <button id="add-info-btn" class="btn-add" title="İnformasiya əlavə et">Informasiya əlavə
+                              et</button>
+                    </div>
+               </div>
+               <table class="table">
+                    <thead class="thead">
+                         <tr>
+                              <th>Şəkil</th>
+                              <th>Başlıq</th>
+                              <th>Xəbər</th>
+                              <th>Tarix</th>
+                              <th>Sil</th>
+                         </tr>
+                    </thead>
+                    <tbody id="product-list" class="tbody">
+                         <!-- Burada məhsullar göstəriləcək -->
+                         <tr class="product">
+                              <td class="product-img">
+                                   <img src="./assets/images/news1.jpg" alt="Məhsul adı" width="100" height="100" />
+                              </td>
+                              <td>Product Name</td>
+                              <td>
+                                   Məhsul haqqında qısa məlumat. Bu, məhsulun təsvirinə aid olan bir
+                                   xəbərdir.
+                              </td>
+                              <td>2025-01-26</td>
+                              <td style="text-align: center;">
+                                   <button class="btn-remove" onclick="handleRemoveProduct()">Sil</button>
+                              </td>
+                         </tr>
+                         <tr class="product">
+                              <td class="product-img">
+                                   <img src="./assets/images/news1.jpg" alt="Məhsul adı" width="100" height="100" />
+                              </td>
+                              <td>Product Name</td>
+                              <td>
+                                   Məhsul haqqında qısa məlumat. Bu, məhsulun təsvirinə aid olan bir
+                                   xəbərdir.
+                              </td>
+                              <td>2025-01-26</td>
+                              <td style="text-align: center;">
+                                   <button class="btn-remove" onclick="handleRemoveProduct()">Sil</button>
+                              </td>
+                         </tr>
+
+                         <!-- Daha çox məhsul əlavə oluna bilər -->
+                    </tbody>
+               </table>
+          </div>
+     </section>
+
+     <!-- //? FoRM -->
+     <div id="form-container" class="form-container">
+          <h2>Informasiya Əlavə Et</h2>
+          <form id="product-info-form">
+               <div class="select-file">
+                    <div class="input-group">
+                         <label for="category">Kateqoriya:</label>
+                         <select id="category" name="category" class="select form-select">
+                              <option value="">Kateqoriya seçin</option>
+                              <option value="news">Xəbər</option>
+                              <option value="announcements">Elan</option>
+                              <option value="activities">Fəaliyyət</option>
+                         </select>
+                    </div>
+                    <div class="input-group">
+                         <label for="images">Şəkil:</label>
+                         <input type="file" id="images" name="images" accept="image/*" />
+                    </div>
+               </div>
+               <div class="input-group">
+                    <label for="title">Xəbər Başlığı:</label>
+                    <input type="text" id="title" name="title" placeholder="Başlığı daxil edin" required />
+               </div>
+               <div class="input-group">
+                    <label for="description">Xəbərin Təsviri:</label>
+                    <textarea id="description" name="description" rows="5"
+                         placeholder="Xəbər haqqında məlumat daxil edin" required></textarea>
+               </div>
+
+               <div class="input-group">
+                    <label for="date">Tarix:</label>
+                    <input type="date" id="date" name="date" required />
+               </div>
+               <button type="submit" class="btn-submit">Yadda Saxla</button>
+               <button type="button" class="close" title="Bağla">Bağla</button>
+          </form>
+     </div>
+
+     <script>
+          // Məhsulu silmək funksiyası
+          function handleRemoveProduct() {
+               if (confirm("Əminsiniz?")) {
+                    alert("Məhsul silindi");
+                    // Məhsulun DOM-dan silinməsi
+                    event.target.parentElement.parentElement.remove();
+               }
+          }
+     </script>
+     <script type="module" src="./assets/js/admin.js"></script>
+</body>
+
+</html>

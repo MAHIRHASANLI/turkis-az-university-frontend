@@ -8,6 +8,32 @@ body {
   font-family: "Raleway", serif;
 }
 
+/* ! ARXA FON SLIDER */
+#slider-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  /* min-height: 100vh; */
+  z-index: -999;
+}
+
+#slider-wrapper .slider-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: lightblue;
+  opacity: 0;
+  overflow: hidden;
+}
+/* ! ARXA FON SLIDER -bitdi */
 .local-container {
   display: grid;
   grid-template-columns: 1fr min(1440px, 97%) 1fr;
@@ -21,19 +47,8 @@ body {
   grid-column: 1 / -1;
 }
 
-body {
-  background-color: #000;
-  /*  */
-}
-body {
-  background-color: #000; /* Şəkilə uyğun fon rəngi */
-  will-change: background-image;
-  backface-visibility: hidden;
-  transition: opacity 0.5s ease-in-out;
-}
-
 #main {
-  background-image: url(../images/01.jpg);
+  /* background-image: url(../images/01.jpg); */
   position: relative;
   padding-top: 40px;
   padding-bottom: 50px;
@@ -202,7 +217,7 @@ i.fa-chevron-down {
   cursor: pointer;
   right: 20px;
   bottom: 20px;
-  z-index: 999999;
+  z-index: 9999;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 

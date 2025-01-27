@@ -16,3 +16,23 @@ export const getBaseRequest = async (category) => {
           return null;
      }
 };
+
+
+export const postBaseRequest = async (data) => {
+     try {
+          const response = await fetch(BASE_URL, {
+               method: "POST",
+               headers: {
+                    "Content-Type": "application/json"
+               },
+               body: JSON.stringify(data)
+          });
+
+          if (!response.ok) {
+               throw new Error("Informasiya elave olunmadi!")
+          };
+          return await response.json();
+     } catch (error) {
+          console.error("Informasiya elave olunmadi: ", error)
+     }
+};

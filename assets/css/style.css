@@ -76,17 +76,17 @@
 @media screen and (min-width: 1400px) {
   .animated-first {
     margin-top: 0px;
-    margin-top: 380px;
+    margin-top: 480px;
   }
 
   .animated-nth {
     margin-top: 20px;
-    margin-top: 400px;
+    margin-top: 480px;
   }
 
   .animated-last {
     margin-top: 30px;
-    margin-top: 420px;
+    margin-top: 480px;
   }
 }
 
@@ -99,7 +99,7 @@
 
   .animated-first {
     margin-top: 0px;
-    margin-top: 360px;
+    margin-top: 380px;
   }
 
   .animated-nth {
@@ -109,7 +109,7 @@
 
   .animated-last {
     margin-top: 30px;
-    margin-top: 400px;
+    margin-top: 380px;
   }
 
   .title {
