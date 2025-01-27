@@ -163,6 +163,10 @@ i.fa-chevron-down {
   flex-wrap: wrap;
 }
 
+.vert-social1 > .social {
+  padding-top: 20px;
+}
+
 .social li a i {
   border: 1px solid #ffff;
   color: #ffff;
@@ -279,6 +283,10 @@ i.fa-chevron-down {
     padding-bottom: 20px;
   }
 
+  .vert-social1 > .social {
+    padding-top: 20px;
+  }
+
   .social li a i {
     padding: 5px;
     border-radius: 5px;
@@ -350,6 +358,10 @@ i.fa-chevron-down {
   .social {
     padding-top: 20px;
     padding-bottom: 30px;
+  }
+
+  .vert-social1 > .social {
+    padding-top: 20px;
   }
 
   .social li a i {
