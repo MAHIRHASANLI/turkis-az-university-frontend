@@ -110,6 +110,11 @@ td {
     align-items: center;
   }
 
+  .select-btn {
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .table {
     min-width: 85%; /* Daha geniş olsun */
     max-width: 90%;
@@ -148,6 +153,11 @@ td {
     width: 100%;
     justify-content: center;
     align-items: center;
+  }
+  .select-btn {
+    justify-content: space-between;
+    width: 100%;
+    gap: 5px;
   }
 
   .table {
