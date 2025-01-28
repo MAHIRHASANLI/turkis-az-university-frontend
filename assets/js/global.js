@@ -23,7 +23,7 @@ function addSliderBackground() {
 
           sliderItems[currentIndex].style.overflow = "visible";
           sliderItems[currentIndex].style.opacity = "1";
-          sliderItems[currentIndex].style.transition = "opacity 0.5s ease-in-out";
+          sliderItems[currentIndex].style.transition = "opacity 0.3s ease-in-out";
      }
 
      setInterval(changeBackground, 5000);

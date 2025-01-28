@@ -34,7 +34,6 @@
 .announcement {
   padding: 5px 0;
   display: flex;
-  justify-content: center;
   gap: 8px;
 }
 

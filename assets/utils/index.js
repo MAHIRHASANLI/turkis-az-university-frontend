@@ -21,3 +21,14 @@ export function createElement(tag, attributes = null, content = null) {
 export function scrollToTop() {
      window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+//! ALERT GOSTERMEK
+export const showAlert = (icon, title) => {
+     Swal.fire({
+          position: "top-end",
+          icon,
+          title,
+          showConfirmButton: false,
+          timer: 1500
+     });
+}

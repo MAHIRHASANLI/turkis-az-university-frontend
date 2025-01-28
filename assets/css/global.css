@@ -16,7 +16,6 @@ body {
   right: 0;
   bottom: 0;
   background-color: #000;
-  /* min-height: 100vh; */
   z-index: -999;
 }
 

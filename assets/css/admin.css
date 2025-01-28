@@ -36,6 +36,14 @@ td {
   margin-top: 30px !important;
 }
 
+.table-item .table-content {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 .search-add {
   display: flex;
   justify-content: space-between;
@@ -181,11 +189,10 @@ td {
   }
 }
 
-.product th {
+.table-item th {
   padding: 10px;
 }
 
-button.btn-put,
 button.btn-remove {
   border: none;
   outline: none;
@@ -194,24 +201,23 @@ button.btn-remove {
   border-radius: 5px;
   cursor: pointer;
   background-color: #f44336;
+  margin: 0 10px;
 }
 
-.product-img {
-  width: 50px;
-  height: 50px;
-  margin: 0;
-  /* border-radius: 50%; */
-  /* margin-right: 10px; */
+.table-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
 }
 
 /* Min 800px və max 1200px üçün */
 @media screen and (max-width: 1200px) and (min-width: 800px) {
-  .product th {
+  .table-item th {
     padding: 12px;
   }
 
-  .product th,
-  .product td {
+  .table-item th,
+  .table-item td {
     padding: 8px;
     font-size: 12px;
   }
@@ -220,63 +226,46 @@ button.btn-remove {
   button.btn-remove {
     padding: 5px 10px;
     font-size: 10px;
+    margin: 0 5px;
   }
 
-  button.btn-put {
-    background-color: rgb(76, 127, 175);
-  }
-
-  button.btn-remove {
-    margin-left: 12px;
-    background-color: #f44336;
-  }
-
-  .product-img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+  .table-item-img {
+    width: 60px;
+    height: 60px;
   }
 }
 
 /* Max 800px üçün */
 @media screen and (max-width: 800px) {
-  .product th {
+  .table-item th {
     padding: 8px;
   }
 
-  .product th,
-  .product td {
+  .table-item th,
+  .table-item td {
     font-size: 10px;
 
     padding: 5px;
   }
 
-  button.btn-put,
   button.btn-remove {
     padding: 3px 5px;
     font-size: 8px;
-  }
-
-  button.btn-put {
-    background-color: rgb(76, 127, 175);
-  }
-
-  button.btn-remove {
+    margin: 5px;
     margin-left: 8px;
     background-color: #f44336;
   }
 
-  .product-img {
+  .table-item-img {
     width: 30px;
     height: 30px;
-    margin-right: 5px;
   }
 }
+
 @media screen and (max-width: 500px) {
-  .product-img {
+  .table-item-img {
     width: 25px;
     height: 20px;
-    margin-right: 3px;
   }
 }
 /* 
@@ -284,19 +273,26 @@ button.btn-remove {
     display: none;
   } */
 #form-container {
-  display: none;
   width: 50%;
   text-align: center;
   background-color: white;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.8); /* Kiçik ölçüdə başlayır */
   padding: 10px 30px 30px;
   border-radius: 15px;
-  z-index: 99;
+  z-index: -1; /* Başlanğıcda görünməz */
+  opacity: 0; /* Görünməz */
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+#form-container.active {
+  z-index: 99; /* Görünən qat */
+  opacity: 1; /* Görünür */
+  transform: translate(-50%, -50%) scale(1); /* Tam ölçüyə keçir */
 }
 
 .select-file {
@@ -381,10 +377,12 @@ label {
   cursor: pointer;
 }
 
-.form-wrapper span {
+.error-message {
+  margin-top: 5px;
   font-size: 12px;
+  letter-spacing: 1px;
   color: red;
-  display: block;
+  display: none;
   text-align: left !important;
 }
 

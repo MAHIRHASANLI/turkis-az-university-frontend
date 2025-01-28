@@ -5,7 +5,12 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Admin Page</title>
+     <!-- CSS FILE -->
+     <!-- SWEET ALERT -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
      <link rel="stylesheet" href="./assets/css/admin.css">
+
 </head>
 
 <body>
@@ -36,10 +41,10 @@
                               <th>Sil</th>
                          </tr>
                     </thead>
-                    <tbody id="product-list" class="tbody">
+                    <tbody id="tbody-list" class="tbody">
                          <!-- Burada məhsullar göstəriləcək -->
-                         <tr class="product">
-                              <td class="product-img">
+                         <tr class="admin-info">
+                              <td class="admin-info-img">
                                    <img src="./assets/images/news1.jpg" alt="Məhsul adı" width="100" height="100" />
                               </td>
                               <td>Product Name</td>
@@ -52,21 +57,6 @@
                                    <button class="btn-remove" onclick="handleRemoveProduct()">Sil</button>
                               </td>
                          </tr>
-                         <tr class="product">
-                              <td class="product-img">
-                                   <img src="./assets/images/news1.jpg" alt="Məhsul adı" width="100" height="100" />
-                              </td>
-                              <td>Product Name</td>
-                              <td>
-                                   Məhsul haqqında qısa məlumat. Bu, məhsulun təsvirinə aid olan bir
-                                   xəbərdir.
-                              </td>
-                              <td>2025-01-26</td>
-                              <td style="text-align: center;">
-                                   <button class="btn-remove" onclick="handleRemoveProduct()">Sil</button>
-                              </td>
-                         </tr>
-
                          <!-- Daha çox məhsul əlavə oluna bilər -->
                     </tbody>
                </table>
@@ -74,37 +64,42 @@
      </section>
 
      <!-- //? FoRM -->
-     <div id="form-container" class="form-container">
+     <div id="form-container">
           <h2>Informasiya Əlavə Et</h2>
           <form id="product-info-form">
                <div class="select-file">
                     <div class="input-group">
                          <label for="category">Kateqoriya:</label>
-                         <select id="category" name="category" class="select form-select">
+                         <select id="category" name="category" class="select form-select" required>
                               <option value="">Kateqoriya seçin</option>
                               <option value="news">Xəbər</option>
                               <option value="announcements">Elan</option>
                               <option value="activities">Fəaliyyət</option>
                          </select>
+                         <span class="error-message">Bu hissəni boş saxlamayın.</span>
                     </div>
                     <div class="input-group">
                          <label for="images">Şəkil:</label>
-                         <input type="file" id="images" name="images" accept="image/*" />
+                         <input type="file" id="images" name="images" accept="image/*" multiple required />
+                         <span class="error-message">Bu hissəni boş saxlamayın.</span>
                     </div>
                </div>
                <div class="input-group">
                     <label for="title">Xəbər Başlığı:</label>
                     <input type="text" id="title" name="title" placeholder="Başlığı daxil edin" required />
+                    <span class="error-message">Bu hissəni boş saxlamayın.</span>
                </div>
                <div class="input-group">
                     <label for="description">Xəbərin Təsviri:</label>
                     <textarea id="description" name="description" rows="5"
                          placeholder="Xəbər haqqında məlumat daxil edin" required></textarea>
+                    <span class="error-message">Bu hissəni boş saxlamayın.</span>
                </div>
 
                <div class="input-group">
                     <label for="date">Tarix:</label>
                     <input type="date" id="date" name="date" required />
+                    <span class="error-message">Bu hissəni boş saxlamayın.</span>
                </div>
                <button type="submit" class="btn-submit">Yadda Saxla</button>
                <button type="button" class="close" title="Bağla">Bağla</button>
@@ -121,6 +116,9 @@
                }
           }
      </script>
+
+     <!-- SweetAlert2 JS -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
      <script type="module" src="./assets/js/admin.js"></script>
 </body>
 
