@@ -17,11 +17,14 @@ async function getInformationsAndAddUI() {
           datas.forEach((data) => {
                const container = categoryContainers[data.category]
                if (container) {
-                    const title = createElement("a", { href: `./${data.category}.html` }, data.title);
-                    const arrow = createElement("i", { className: "fa fa-arrow-right" });
-                    const containerItem = createElement("div", { className: "container-item announcement" });
-                    containerItem.append(arrow, title);
-                    container.append(containerItem);
+                    if (container.children.length < 5) {
+                         const title = createElement("a", { href: `./${data.category}.html` }, data.title);
+                         const arrow = createElement("i", { className: "fa fa-arrow-right" });
+                         const containerItem = createElement("div", { className: "container-item announcement" });
+                         containerItem.append(arrow, title);
+                         container.append(containerItem);
+
+                    }
                }
           });
      } catch (error) {
