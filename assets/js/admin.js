@@ -6,12 +6,13 @@ let allDatas = [];
 
 window.addEventListener("DOMContentLoaded", async function () {
      await getDatasToAdmin();
-     await handleDeleteInformation();
+     handleDeleteInformation();
      handleChangeCategory();
      onSubmitForm();
      handleCloseModal();
      handleOpenModal();
-     addMinDateToInput()
+     addMinDateToInput();
+     handleSearchInformation();
 })
 
 //! SERVERDEN DATA GETIRILMESI;
@@ -38,7 +39,7 @@ function loadAndRenderInfo(datas, category) {
                tdButton.append(button)
 
                const trContainer = createElement("tr", { className: "table-item", id: data._id })
-               const pTitle = createElement("p", { className: "table-content" }, data.title);
+               const pTitle = createElement("p", { className: "table-content infos-title" }, data.title);
                const tdTitle = createElement("td", {}, pTitle);
 
                const pDescription = createElement("p", { className: "table-content" }, data.description);
@@ -102,47 +103,46 @@ function onSubmitForm() {
      });
 }
 
-// function errorMessage(formData) {
-//      console.log(formData);
-
-
-//      for (const [key, value] of formData.entries()) {
-//           if (value) {
-//                document.getElementById(formData.get(key)).addEventListener("invalid", function (e) {
-//                     console.log(e.taget);
-//                })
-//           } else {
-//                console.log("else");
-
-//           }
-//      }
-
-// }
-
 //! DELETE FUNKSIYASI;
 function handleDeleteInformation() {
-     const removeBtn = document.querySelectorAll(".btn-remove");
-     removeBtn.forEach((btn) => {
-          btn.addEventListener("click", async function (event) {
-               console.log('kk');
+     const tbodyContainer = document.getElementById("tbody-list");
 
+     tbodyContainer.addEventListener("click", async function (event) {
+          if (event.target.classList.contains("btn-remove")) {
                if (confirm("Silmek ucun tesdiq edin!")) {
                     try {
-                         const element = event.target.parentElement.parentElement
+                         const element = event.target.closest("tr");
                          const response = await deleteBaseRequest(element.id);
 
-                         showAlert("success", "Uğurla silindi.")
+                         showAlert("success", "Uğurla silindi.");
                          element.remove();
 
                          console.log("Server Response:", response);
                     } catch (error) {
                          showAlert("error", "Silinmə uğursuz oldu.");
                          console.error("Silinme ugursuz oldu: ", error);
-
                     }
+               }
+          }
+     });
+}
+
+//! AXTARIS FUNKSIYASI;
+function handleSearchInformation() {
+     const inputSearch = document.getElementById("search-input");
+     inputSearch.addEventListener("input", function (event) {
+          const searchValue = event.target.value.toLowerCase().trim()
+          const infosTitles = document.querySelectorAll(".infos-title");
+          infosTitles.forEach((item) => {
+               const titleText = item.textContent.toLowerCase().trim()
+               if (!searchValue || titleText.includes(searchValue)) {
+                    item.closest(".table-item").style.display = "table-row";
+               } else {
+                    item.closest(".table-item").style.display = "none";
                }
           })
      })
+
 }
 
 //! MODALIN BAGLANMASI

@@ -11,8 +11,8 @@ section.section {
 }
 
 .table {
-  min-width: 85%;
-  max-width: 95%;
+  min-width: 90%;
+  max-width: 90%;
   /* background-color: rgba(0, 0, 0, 0.1); */
   /* border-radius: 20px; */
   padding: 20px;
@@ -49,7 +49,8 @@ td {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  width: 85%;
+  min-width: 90%;
+  max-width: 95%;
 }
 
 .serch-input {
