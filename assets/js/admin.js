@@ -72,7 +72,7 @@ function onSubmitForm() {
      myForm.addEventListener("submit", async function (event) {
           event.preventDefault();
           toggleForm()
-          const formData = new FormData(this)ı
+          const formData = new FormData(this)
           try {
                const date = formData.get("date");
                const newObject = {
