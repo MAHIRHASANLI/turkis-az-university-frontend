@@ -72,9 +72,8 @@ function onSubmitForm() {
      myForm.addEventListener("submit", async function (event) {
           event.preventDefault();
           toggleForm()
-
+          const formData = new FormData(this)ı
           try {
-               const formData = new FormData(myForm);
                const date = formData.get("date");
                const newObject = {
                     title: formData.get("title"),
@@ -87,7 +86,6 @@ function onSubmitForm() {
                     newObject.images.map((img) => postBaseCloudinary(img))
                );
                newObject.images = imgURLs;
-
                const response = await postBaseRequest(newObject);
 
                showAlert("success", "Əlavə olundu!")
