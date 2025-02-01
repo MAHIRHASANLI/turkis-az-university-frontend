@@ -6,6 +6,13 @@ hr {
   margin-bottom: 60px;
 }
 
+.counter-name {
+  color: rgb(194, 150, 40);
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
 .name h3 {
   font-size: 26px;
   color: rgba(255, 255, 255, 0.8);
