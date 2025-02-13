@@ -1,0 +1,30 @@
+hr {
+  padding: 1px;
+  background-color: rgb(240, 175, 10);
+  margin-top: 50px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.programs p {
+  margin-top: 20px;
+  line-height: 27px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 900px) {
+  hr {
+    padding: 1px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .programs p {
+    margin-top: 10px;
+    line-height: 20px;
+
+    font-size: 13px;
+  }
+}

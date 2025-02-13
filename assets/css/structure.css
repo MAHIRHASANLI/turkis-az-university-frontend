@@ -36,6 +36,20 @@ strong {
   color: #44c6eb;
 }
 
+a.cv {
+  background-color: rgb(194, 150, 40);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 50px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 25px;
+}
+
+a.cv:hover {
+  color: #000;
+}
+
 .image {
   margin-left: 10px;
   margin-bottom: 15px;
