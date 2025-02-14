@@ -73,9 +73,9 @@ hr {
   transition: 150ms;
   line-height: 17px;
   overflow: hidden;
-  /*display: -webkit-box;
+  display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical; */
+  -webkit-box-orient: vertical;
 }
 
 .accardion-wrapper li .accardion li a.info:hover {
@@ -172,5 +172,11 @@ hr {
     height: 150px;
     border-radius: 10px;
     /* float: right; */
+  }
+
+  .accardion-wrapper li .accardion li a.info {
+    padding: 5px 12px;
+    font-size: 12px;
+    line-height: 15px;
   }
 }
