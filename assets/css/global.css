@@ -19,6 +19,16 @@ body {
   z-index: -999;
 }
 
+#slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
 #slider-wrapper .slider-item {
   position: absolute;
   top: 0;
@@ -35,7 +45,7 @@ body {
 /* ! ARXA FON SLIDER -bitdi */
 .local-container {
   display: grid;
-  grid-template-columns: 1fr min(1440px, 97%) 1fr;
+  grid-template-columns: 1fr min(1440px, 95%) 1fr;
 }
 
 .local-container > * {
@@ -68,10 +78,20 @@ body {
 
 .logo {
   background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 180px;
 }
+
+.logo a {
+  height: 100%;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo img {
-  width: 100%;
-  width: 100%;
+  width: 85%;
 }
 
 .cssmenu .link {
