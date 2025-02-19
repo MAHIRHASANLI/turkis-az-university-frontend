@@ -8,20 +8,20 @@ hr {
 
 .counter-name {
   color: rgb(194, 150, 40);
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 25px;
   font-weight: 300;
 }
 
 .name h3 {
-  font-size: 26px;
+  font-size: 22px;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .description p {
   margin-top: 20px;
   line-height: 21px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -55,6 +55,8 @@ a.cv:hover {
   margin-bottom: 15px;
   width: 320px;
   height: 200px;
+  width: 150px;
+  height: 130px;
   float: right;
 }
 
