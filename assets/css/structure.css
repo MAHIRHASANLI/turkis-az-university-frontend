@@ -6,6 +6,10 @@ hr {
   margin-bottom: 60px;
 }
 
+.prorector {
+  height: 100px;
+}
+
 .counter-name {
   color: rgb(194, 150, 40);
   font-size: 16px;
@@ -65,7 +69,7 @@ a.cv:hover {
   height: 100%;
   border: solid 2px #fff;
   border-radius: 15px;
-  object-fit: fill;
+  object-fit: cover;
   background-color: black;
   color: white;
 }
