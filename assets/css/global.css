@@ -99,7 +99,7 @@ body {
 .web-title {
   text-transform: uppercase;
   color: white;
-  font-size: 10px;
+  font-size: 8px;
   margin-top: 5px;
 }
 
@@ -275,6 +275,7 @@ i.fa-chevron-down {
     margin: 0 0 12px;
     font-family: "Raleway", serif;
     text-transform: uppercase;
+    line-height: initial;
   }
 }
 
@@ -343,7 +344,7 @@ i.fa-chevron-down {
   }
 
   .sec-title {
-    font-size: 24px;
+    font-size: 22px;
     color: #fff;
     padding: 50px 20px;
     text-align: center;
@@ -351,6 +352,7 @@ i.fa-chevron-down {
     margin: 0 0 12px;
     font-family: "Raleway", serif;
     text-transform: uppercase;
+    line-height: initial;
   }
 }
 
@@ -366,6 +368,13 @@ i.fa-chevron-down {
     width: 100%;
     height: 180px;
   }
+
+  .logo a.logo-link .web-title {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .cssmenu ul li a {
     padding: 10px;
     font-size: 14px;
@@ -429,7 +438,7 @@ i.fa-chevron-down {
   }
 
   .sec-title {
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
     padding: 30px 0;
     text-align: center;
@@ -437,6 +446,7 @@ i.fa-chevron-down {
     margin: 0 0 12px;
     font-family: "Raleway", serif;
     text-transform: uppercase;
+    line-height: initial;
   }
 
   .top-back-btn {
