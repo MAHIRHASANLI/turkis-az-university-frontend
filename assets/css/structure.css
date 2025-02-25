@@ -18,9 +18,26 @@ hr {
   font-weight: 300;
 }
 
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .name h3 {
   font-size: 22px;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.name span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.name strong {
+  font-weight: bold;
+  color: rgb(194, 150, 40);
 }
 
 .description p {
